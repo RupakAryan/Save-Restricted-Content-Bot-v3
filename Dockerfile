@@ -1,9 +1,12 @@
 FROM python:3.10-slim
 
-RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y git curl python3-pip ffmpeg software-properties-common
+FROM python:3.10-slim
+
+RUN apt-get update -y && apt-get upgrade -y && \
+    apt-get install -y git curl ffmpeg python3-pip
 
 WORKDIR /app
+
 COPY requirements.txt .
 
 RUN pip3 install wheel
