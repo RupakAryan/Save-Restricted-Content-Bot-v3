@@ -1,7 +1,5 @@
 FROM python:3.10-slim
 
-FROM python:3.10-slim
-
 RUN apt-get update -y && apt-get upgrade -y && \
     apt-get install -y git curl ffmpeg python3-pip
 
